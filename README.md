@@ -1,0 +1,3 @@
+### Compile jlox
+    javac java/com/craftinginterpreters/lox/*.java
+    java -cp java com.craftinginterpreters.lox.Lox
