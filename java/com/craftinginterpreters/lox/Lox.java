@@ -8,7 +8,7 @@ import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
-import java.util.Scanner;
+// import java.util.Scanner;
 
 public class Lox {
     static boolean hadError = false;
@@ -48,7 +48,7 @@ public class Lox {
 
     private static void run(String source) {
         Scanner scanner = new Scanner(source);
-        List<Tokens> tokens = scanner.scanTokens();
+        List<Token> tokens = scanner.scanTokens();
 
         // For now, just print the tokens
         for (Token token : tokens) {

@@ -160,7 +160,7 @@ public class Scanner {
         if (isAtEnd()) return false;
         if (source.charAt(current) != expected) return false;
 
-        currect++;
+        current++;
         return true;
     }
 
@@ -180,7 +180,7 @@ public class Scanner {
                 c == '_';
     }
 
-    private isAlphaNumeric(char c) {
+    private boolean isAlphaNumeric(char c) {
         return isAlpha(c) || isDigit(c);
     }
 
