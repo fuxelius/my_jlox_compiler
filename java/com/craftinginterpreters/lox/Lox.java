@@ -8,7 +8,6 @@ import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
-// import java.util.Scanner;
 
 public class Lox {
     static boolean hadError = false;
@@ -42,6 +41,7 @@ public class Lox {
             String line = reader.readLine();
             if (line == null) break;
             run(line); 
+            System.out.printf("\n");        // Print new line 
             hadError = false;
         }
     }
@@ -54,6 +54,7 @@ public class Lox {
         for (Token token : tokens) {
             System.out.println(token);
         }
+        System.out.printf("\n");            // Print new line 
     }
 
     static void error(int line, String message) {

@@ -189,7 +189,10 @@ public class Scanner {
     }
 
     private char advance() {
-        return source.charAt(current++);
+        char c = source.charAt(current);
+        current++;
+
+        return c;
     }
 
     private void addToken(TokenType type) {

@@ -1,0 +1,65 @@
+class Breakfast {
+    init(meat, bread) {
+        this.meat = meat;
+        this.bread = bread;
+    }
+
+    cook() {
+        print "Eggs a-frying'!";
+    }
+
+    serve(who) {
+        print "Enjoy your " + this.meat + " and " + this.bread + ", " + who + ".";
+    }
+}
+
+class Brunch < Breakfast {
+    init(meat, bread, drink) {
+        super.init(meat, bread);
+        this.drink = drink;
+    }
+
+    drink2() {
+        print "How about a bloody mary?";
+    }
+}
+
+var  b = Breakfast;
+
+var breakfast = b("bacon", "toast");
+
+breakfast.cook();
+
+breakfast.serve("me me me"); 
+
+breakfast.meat = "sausage";
+breakfast.bread = "knäckbroit";
+
+breakfast.serve("dear reader"); 
+
+var yoo = Brunch("dog", "barkis", "GT");
+yoo.drink2();
+yoo.serve("Noble Reader!");
+
+for (var i=-5; i < 5; i = i + 1) {
+    print i;
+}
+
+// ------------------------------------
+if ("") print "1 true";
+if (0) print "2 true";
+if (nil) print "3 true";
+
+// ------------------------------------
+var a = "global";
+
+{
+  print a;   // ?
+  var a = "local";
+}
+
+// ------------------------------------
+var z;
+var t = z = 77;
+print t;
+
