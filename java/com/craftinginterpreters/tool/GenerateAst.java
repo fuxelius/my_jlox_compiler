@@ -28,7 +28,7 @@ public class GenerateAst {
 
         writer.println("package com.craftinginterpreters.lox;");
         writer.println();
-        writer.println("import java.util.List");
+        writer.println("import java.util.List;");
         writer.println();
         writer.println("abstract class " + baseName + " {");
 
@@ -44,7 +44,7 @@ public class GenerateAst {
     }
 
     private static void defineType(PrintWriter writer, String baseName, String className, String fieldList) {
-        writer.println("  static class " + className + " extends " + baseName + " {");
+        writer.println("\n  static class " + className + " extends " + baseName + " {");
 
         // Constructor.
         writer.println("    " + className + "(" + fieldList + ") {");
@@ -64,7 +64,8 @@ public class GenerateAst {
             writer.println("    final " + field + ";");
         }
 
-        writer.println("   }");
+        writer.println("  }");
+
     }
 
 }
